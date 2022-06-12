@@ -36,8 +36,19 @@
     </header>
     <main>
       <div id="estoque" tabindex="1">
-        <h2>Em estoque</h2>
-        <div id="conteudoestoque"></div>
+        <div style="display: none">
+          <h2>Em estoque</h2>
+          <div id="conteudoestoque"></div>
+        </div>
+        <h2>Realizar Retirada</h2>
+        <form onsubmit="return false" class="form-display">
+          <h3>Selecione o produto que deseja retirar</h3>
+          <select id="select-retirada"></select>
+          <h3>Quantidade a ser retirada</h3>
+          <select id="quantidade-retirada"></select>
+
+          <button id="btnForm">Realizar Retirada</button>
+        </form>
       </div>
       <div id="botoes">
         <button id="retirada" tabindex="2">Retirar Doação</button>

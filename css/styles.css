@@ -23,6 +23,10 @@ h1 {
   margin: 5px;
   height: 200px;
   padding: 30px;
+  font-size: 15pt;
+  color: #fff;
+  display: block;
+  opacity: 1 !important ;
 }
 
 #doadosinicio {
@@ -30,6 +34,11 @@ h1 {
   width: 24.5vw;
   margin: 5px;
   height: 200px;
+  padding: 30px;
+  font-size: 15pt;
+  color: #fff;
+  display: block;
+  opacity: 1 !important ;
 }
 
 #retirados24 {
@@ -37,12 +46,22 @@ h1 {
   width: 24.5vw;
   margin: 5px;
   height: 200px;
+  padding: 30px;
+  font-size: 15pt;
+  color: #fff;
+  display: block;
+  opacity: 1 !important ;
 }
 #retiradosinicio {
   background-color: rgb(255, 50, 68);
   width: 24.5vw;
   margin: 5px;
   height: 200px;
+  padding: 30px;
+  font-size: 15pt;
+  color: #fff;
+  display: block;
+  opacity: 1 !important ;
 }
 
 main {
@@ -68,11 +87,12 @@ main {
   margin: 5px;
   border: 0px;
   height: 100px;
-}
-#retirada {
-  background-color: rgb(255, 194, 0);
+  font-size: 20pt;
 }
 #doacao {
+  background-color: rgb(255, 194, 0);
+}
+#retirada {
   background-color: rgb(0, 169, 58);
 }
 #telainicial {
@@ -89,4 +109,77 @@ main {
 }
 header p {
   opacity: 0;
+}
+#conteudoestoque {
+  font-family: arial;
+  font-size: 10pt;
+  font-weight: bold;
+}
+#totalestoque {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+#pdoacaoinicio,
+#pdoacao24,
+#pretirados24,
+#pretiradosinicio {
+  font-size: 15pt;
+  opacity: 1 !important ;
+}
+
+
+.form-display {
+  width: 60%;
+  padding: 20px;
+  text-align: left;
+  margin: auto;
+}
+
+.form-display h3 {
+  display: block;
+  font-size: 15pt;
+  padding: 10px;
+  font-family: "Verdana";
+}
+.validade label {
+  display: inline-block !important;
+  font-family: "verdana";
+}
+.form-display select {
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid silver;
+}
+.validade select {
+  width: 14.7%;
+  margin-bottom: 5px;
+}
+
+.form-display input[type="text"] {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.form-display button {
+  padding: 20px;
+  background-color: darkred;
+  color: #fff;
+  border: 0px;
+  margin-left: 40%;
+  margin-top: 20px;
+}
+
+.sobre {
+  padding: 10px;
+  width: 80%;
+  border: silver 1px solid;
+  margin: 5px;
+  text-align: left;
+  font-size: 10pt;
+  line-height: 15pt;
+  padding-right: 200px;
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco de Alimentos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body onload="carregarDados()">
+    <header tabindex="1">
+      <h1>Banco de Alimentos</h1>
+      <p>
+        Projeto banco de alimentos para realizar a doação e retirada de
+        alimentos
+      </p>
+
+      <div id="historico">
+        <div id="doados24">
+          <p id="pdoacao24"></p>
+          Alimentos doados nas últimas 24 horas
+        </div>
+        <div id="doadosinicio">
+          <p id="pdoacaoinicio"></p>
+          Alimentos doados desde o início da campanha
+        </div>
+        <div id="retirados24">
+          <p id="pretirados24"></p>
+          Doações retiradas nas últimas 24 horas
+        </div>
+        <div id="retiradosinicio">
+          <p id="pretiradosinicio"></p>
+          Doações retiradas desde o início da campanha
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="estoque" tabindex="1">
+        <div style="display: none">
+          <h2>Em estoque</h2>
+          <div id="conteudoestoque"></div>
+        </div>
+        <div class="sobre">
+          <h1>Banco de alimentos</h1>
+          <div>
+            <br />
+            <h3>Projeto: Banco de Alimentos</h3>
+            <hr />
+            <h4>Projeto Integrador em Computação I - PJI-110-0023</h4>
+            <hr />
+            <h4>Polo Jambeiro - São Paulo</h4>
+            <h5>Objetivo</h5>
+            Este projeto é parte integrante da disciplina de Projeto Integrador
+            em Computação I - PJI-110-0023 - realizada no 4º bimestre de 2021 na
+            Univesp - Universidade Virtual do Estado de São Paulo
+            <br />
+            <br />
+            O projeto tem como objetivo desenvolver um software através de um
+            framework web, utilizando noções de banco de dados e realizando
+            controle de versão, visando auxiliar a administração de um
+            condomínio em sua campanha de doação de alimentos. O aplicativo,
+            além das funcionalidades de cadastro de banco de dados, irá
+            identificar os produtos mais doados a fim de subsidiar a
+            administração dos condomínios com informações que possam ajudá-los a
+            promover o engajamento dos moradores em doações em produtos com
+            maior necessidade dos condôminos e com isto reduzir estoque de
+            produtos e o risco de perdas por vencimento de validade.
+            <br />
+            <br />
+            https://univespfrontbancoalimentos.herokuapp.com/
+            <br />
+            <br />
+            <h5>Time de desenvolvimento</h5>
+            <br />
+            <br />
+            Tathiane Costa Pereira - Polo Jambeiro - São Paulo
+            <br />
+            Edilson Jesus da Silva - Polo Jambeiro - São Paulo
+            <br />
+            Eduardo Gonçalves Gama - Polo Jambeiro - São Paulo
+            <br />
+            José Ocimar Alves de Freitas - Polo Jambeiro - São Paulo
+            <br />
+            Danilo Eiji Ito - Polo Bragança Paulista
+          </div>
+        </div>
+      </div>
+      <div id="botoes">
+        <button id="retirada" tabindex="2">Retirar Doação</button>
+        <button id="doacao" tabindex="3">Realizar Doação</button>
+        <button id="telainicial" tabindex="4">Tela Incial</button>
+        <button id="sobre" tabindex="5">Sobre</button>
+      </div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
