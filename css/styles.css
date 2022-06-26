@@ -28,15 +28,14 @@ h1 {
   display: flex;
   flex-direction: row;
   opacity: 1 !important ;
-
 }
 #doados24 ion-icon,
 #doadosinicio ion-icon,
 #retirados24 ion-icon,
-#retiradosinicio ion-icon{
-  width:100px;
-  height:100px;
-  opacity:0.5
+#retiradosinicio ion-icon {
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
 }
 
 #doadosinicio {
@@ -143,7 +142,6 @@ header p {
   opacity: 1 !important ;
 }
 
-
 .form-display {
   width: 60%;
   padding: 20px;
@@ -189,7 +187,7 @@ header p {
 }
 
 .sobre {
-  font-family: 'verdana';
+  font-family: "verdana";
   padding: 10px;
   width: 80%;
   margin: 5px;
@@ -198,6 +196,65 @@ header p {
   line-height: 15pt;
   padding-right: 200px;
 }
-#dia,#mes,#ano,#quantidade{
+#dia,
+#mes,
+#ano,
+#quantidade {
   width: 6.6vw;
+}
+
+@media (min-width: 0) and (max-width: 767.98px) {
+  #historico {
+    width: 100vw;
+    flex-wrap: wrap;
+    padding-left: 5px;
+  }
+  #doados24,
+  #doadosinicio,
+  #retirados24,
+  #retiradosinicio {
+    width: 46vw;
+    font-size: 90%;
+    display: block;
+  }
+  main {
+    display: block;
+  }
+  #estoque {
+    width: 98vw;
+    padding: 10px;
+  }
+  #botoes {
+    display: inline-block;
+    width: 98vw;
+    padding-left: 0px;
+  }
+  .form-display {
+    width: 100vw;
+    padding-left: 0px;
+  }
+  .form-display h3 {
+    font-size: 12px;
+  }
+  .form-display button {
+    margin-left: 25%;
+  }
+  .form-display label {
+    display: block !important;
+    text-align: right;
+    padding-right: 30px;
+  }
+  #dia,
+  #mes,
+  #ano,
+  #quantidade {
+    width: 60vw;
+  }
+  .plsobre {
+    display: block;
+    height: 200vh;
+  }
+  .sobre div {
+    width: 80vw !important;
+  }
 }
