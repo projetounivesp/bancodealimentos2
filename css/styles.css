@@ -25,8 +25,18 @@ h1 {
   padding: 30px;
   font-size: 15pt;
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: row;
   opacity: 1 !important ;
+
+}
+#doados24 ion-icon,
+#doadosinicio ion-icon,
+#retirados24 ion-icon,
+#retiradosinicio ion-icon{
+  width:100px;
+  height:100px;
+  opacity:0.5
 }
 
 #doadosinicio {
@@ -37,7 +47,8 @@ h1 {
   padding: 30px;
   font-size: 15pt;
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: row;
   opacity: 1 !important ;
 }
 
@@ -49,7 +60,8 @@ h1 {
   padding: 30px;
   font-size: 15pt;
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: row;
   opacity: 1 !important ;
 }
 #retiradosinicio {
@@ -60,7 +72,8 @@ h1 {
   padding: 30px;
   font-size: 15pt;
   color: #fff;
-  display: block;
+  display: flex;
+  flex-direction: row;
   opacity: 1 !important ;
 }
 
@@ -88,6 +101,8 @@ main {
   border: 0px;
   height: 100px;
   font-size: 20pt;
+  text-align: left;
+  padding-left: 10px;
 }
 #doacao {
   background-color: rgb(255, 194, 0);
@@ -174,12 +189,15 @@ header p {
 }
 
 .sobre {
+  font-family: 'verdana';
   padding: 10px;
   width: 80%;
-  border: silver 1px solid;
   margin: 5px;
   text-align: left;
   font-size: 10pt;
   line-height: 15pt;
   padding-right: 200px;
+}
+#dia,#mes,#ano,#quantidade{
+  width: 6.6vw;
 }

@@ -59,21 +59,41 @@
               Ano:
               <select id="ano"></select>
             </label>
+            <label>
+              Quantidade:
+              <select id="quantidade"></select>
+            </label>
           </div>
 
-          <select id="quantidade"></select>
-
-          <button id="btnForm">Realizar Doação</button>
+          <button id="btnForm" onclick="realizarDoacao()">
+            Realizar Doação
+          </button>
         </form>
       </div>
       <div id="botoes">
-        <button id="retirada" tabindex="2">Retirar Doação</button>
-        <button id="doacao" tabindex="3">Realizar Doação</button>
-        <button id="telainicial" tabindex="4">Tela Incial</button>
-        <button id="sobre" tabindex="5">Sobre</button>
+        <button id="retirada" tabindex="2">
+          <ion-icon name="pricetag"></ion-icon> Retirar Doação
+        </button>
+        <button id="doacao" tabindex="3">
+          <ion-icon name="heart"></ion-icon> Realizar Doação
+        </button>
+        <button id="telainicial" tabindex="4">
+          <ion-icon name="home"></ion-icon> Tela Incial
+        </button>
+        <button id="sobre" tabindex="5">
+          <ion-icon name="settings"></ion-icon> Sobre
+        </button>
       </div>
     </main>
 
     <script src="js/scripts.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -9,9 +9,14 @@ function carregarDados() {
   url = window.location.href.split("/");
   if (url[3] === "formretirada.html") {
     formRetirada();
+    qtdRetirada();
   }
   if (url[3] === "formdoacao.html") {
     formDoacao();
+    listaDias();
+    listaMes();
+    listaAno();
+    listaQtd();
   }
 }
 
@@ -152,6 +157,144 @@ function formDoacao() {
     })
     .catch((error) =>
       console.error(`Erro ao tentar carregar a lista de produtos -> ${error}`)
+    );
+}
+
+function listaDias() {
+  for (var i = 1; i < 31; i++) {
+    document.getElementById(
+      "dia"
+    ).innerHTML += `<option value=${i}>${i}</option>`;
+  }
+}
+
+function listaAno() {
+  for (var i = 2020; i < 2030; i++) {
+    document.getElementById(
+      "ano"
+    ).innerHTML += `<option value=${i}>${i}</option>`;
+  }
+}
+
+function listaMes() {
+  var mes = `
+  <option value="1">Janeiro</option>
+  <option value="2">Fevereiro</option>
+  <option value="3">Março</option>
+  <option value="4">Abril</option>
+  <option value="5">Maio</option>
+  <option value="6">Junho</option>
+  <option value="7">Julho</option>
+  <option value="8">Agosto</option>
+  <option value="9">Setembro</option>
+  <option value="10">Outubro</option>
+  <option value="11">Novembro</option>
+  <option value="12">Dezembro</option> `;
+  document.getElementById("mes").innerHTML = mes;
+}
+
+function listaQtd() {
+  for (var i = 1; i < 20; i++) {
+    document.getElementById(
+      "quantidade"
+    ).innerHTML += `<option value=${i}>${i}</option>`;
+  }
+}
+
+function qtdRetirada() {
+  for (var i = 1; i <= 5; i++) {
+    document.getElementById(
+      "quantidade-retirada"
+    ).innerHTML += `<option value=${i}>${i}</option>`;
+  }
+}
+
+//-------------------------------------------- Cadastrar doacao ------------
+
+function realizarDoacao() {
+  // Realizando o cadastro de uma nova doação
+  const produto = document.getElementById("select-retirada").value;
+  const doador = 1;
+  const qtd = document.getElementById("quantidade").value;
+
+  const dia = document.getElementById("dia").value;
+  const mes = document.getElementById("mes").value;
+  const ano = document.getElementById("ano").value;
+
+  const datavalidade = `${ano}-${mes}-${dia}`;
+
+  fetch(`${pathURL}/doacao/cadastro`, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      idproduto: produto,
+      iddoador: doador,
+      quantidade: qtd,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert("Doação cadastrada.");
+      console.log(data);
+    })
+    .catch((error) =>
+      console.error(`Erro ao tentar cadastrar uma nova doação -> ${error}`)
+    );
+
+  // Realizando o cadastro de uma nova entrada
+
+  fetch(`${pathURL}/entrada/cadastro`, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      idproduto: produto,
+      datavalidade: datavalidade,
+      quantidade: qtd,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) =>
+      console.error(`Erro ao tentar cadastrar uma nova entrada -> ${error}`)
+    );
+}
+
+//--------------------------- cadastrar retirada -----------------------------------------
+
+function realizarRetirada() {
+  // Realizando o cadastro de uma nova entrada
+  const produto = document.getElementById("select-retirada").value;
+  const qtd = document.getElementById("quantidade-retirada").value;
+
+  fetch(`${pathURL}/retirada/cadastro`, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      idproduto: produto,
+      quantidade: qtd,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert("Retirada realizada.");
+      console.log(data);
+    })
+    .catch((error) =>
+      console.error(`Erro ao tentar cadastrar uma nova retirada -> ${error}`)
     );
 }
 
