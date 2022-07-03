@@ -82,13 +82,11 @@ main {
 }
 #estoque {
   width: 70vw;
-  height: 60vh;
   border: 1px solid #ddd;
   margin: 5px;
 }
 #botoes {
   width: 30vw;
-  height: 60vh;
   margin: 5px;
   border: 1px solid #ddd;
   padding: 10px;
@@ -185,7 +183,9 @@ header p {
   margin-left: 40%;
   margin-top: 20px;
 }
-
+#plsobre {
+  width: 70%;
+}
 .sobre {
   font-family: "verdana";
   padding: 10px;
@@ -254,7 +254,10 @@ header p {
     display: block;
     height: 200vh;
   }
-  .sobre div {
-    width: 80vw !important;
-  }
+}
+label span {
+  opacity: 0;
+}
+header a {
+  display: none;
 }

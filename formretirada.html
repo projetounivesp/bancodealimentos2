@@ -9,6 +9,7 @@
   </head>
   <body onload="carregarDados()">
     <header tabindex="1">
+      <a href="#main">skip</a>
       <h1>Banco de Alimentos</h1>
       <p>
         Projeto banco de alimentos para realizar a doação e retirada de
@@ -39,7 +40,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div id="estoque" tabindex="1">
         <div style="display: none">
           <h2>Em estoque</h2>
@@ -48,9 +49,11 @@
         <h2>Realizar Retirada</h2>
         <form onsubmit="return false" class="form-display">
           <h3>Selecione o produto que deseja retirar</h3>
+          <label for="select-retirada"><span>Selecione</span></label>
           <select id="select-retirada" onchange="mensagem()"></select>
 
           <h3>Quantidade a ser retirada</h3>
+          <label for="quantidade-retirada"><span>Selecione</span></label>
           <select id="quantidade-retirada"></select>
 
           <button id="btnForm" onclick="realizarRetirada()">
